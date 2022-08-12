@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url("./ProximaNova-Reg.otf");
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./2211.ttf");
+}
+body {
+    background-color: #120f0f;
+    color: #989898;
+    font-family: "Proxima Nova Rg";
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+}
+a {
+    color: #989898;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.start_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(IT_back_grad_01.png);
+    background-position: calc(50% - 100px) calc(50% + 50px);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.main_border {
+    position: absolute;
+    top: calc(50% - 380px);
+    right: calc(50% - 540px);
+    left: calc(50% - 540px);
+    height: 700px;
+    display: flex;
+
+}
+@media (max-height: 780px) {
+    .main_border {
+        top: 10px;
+    }
+}
+@media (max-width: 1280px) {
+    .main_border {
+        right: 5%;
+        left: 5%;
+    }
+}
+.left_menu {
+    width: 330px;
+    min-width: 230px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.left_menu img {
+    height: 75px;
+    margin: 0 auto 40px auto;
+    opacity: 60%;
+}
+.right_menu {
+    width: 100%;
+    height: fit-content;
+}
+.right_button_menu {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 40px;
+}
+.right_button {
+    width: 160px;
+    height: 45px;
+    text-transform: uppercase;
+    font-size: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.right_button:hover {
+    color: white;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-weight: lighter;
+}
+.right_button::after {
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    content: "";
+    background-color: #e72a34;
+    opacity: 0;
+}
+.right_button:hover::after {
+    opacity: 1;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+.right_button h1 {
+    width: 100%;
+    text-align: center;
+}
+.partners_pack {
+    margin-top: 10%;
+    margin-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.part_img {
+    position: relative;
+    width: 240px;
+    height: 140px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+}
+.part_img p {
+    font-family: "Open Sans";
+    position: absolute;
+    bottom: 7px;
+    opacity: 0;
+    text-align: center;
+}
+.part_img::after {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.part_img:hover::after {
+    opacity: 0.05;
+}
+.part_img:hover p {
+    opacity: 0.8;
+}
+.part_img img {
+    margin: auto;
+    width: 160px;
+    height: 80px;
+}
+#partners {
+    color: white;
+}
+@media (max-width: 725px) {
+    .left_menu {
+        display: none;
+    }
+    .right_button_menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .right_button {
+        margin-bottom: 30px;
+    }
+    .partners_pack {
+        justify-content: center;
+    }
+}
